@@ -93,9 +93,9 @@ function App() {
   const openLoginDeepLink = (payment: boolean = false) => {
     const redirectUrl = `${REDIRECT_URL}?status=${
       payment ? "payment" : "login"
-    }&sku=${SKU}`;
+    }%26sku=${SKU}`;
     window.location.replace(
-      `bazaar://inapplogin?redirectUrl=${redirectUrl}}&packageName=${PACKAGE_NAME}&permissionScope=1`
+      `bazaar://inapplogin?redirectUrl=${redirectUrl}&packageName=${PACKAGE_NAME}&permissionScope=1`
     );
   };
 
